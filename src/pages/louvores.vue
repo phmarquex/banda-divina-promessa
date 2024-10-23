@@ -25,7 +25,7 @@ const addCount = () => {
   <VTabs
     v-model="activeTab"
     height="60px"
-    fixed-tabs="true"
+    fixed-tabs
   >
     <VTab
       v-for="item in tabs"
@@ -36,7 +36,7 @@ const addCount = () => {
     >
       <VIcon
         size="20"
-        start="true"
+        start
         :icon="item.icon"
       />
       {{ item.title }}

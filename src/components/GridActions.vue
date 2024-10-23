@@ -3,8 +3,8 @@ import { ref } from 'vue'
 
 const props = defineProps<{
   slotNamesActions?: string[]
-  onAgree: (item: number) => Promise<void>
-  id: number
+  onAgree: (item: number | string) => Promise<void>
+  id: number | string
   path: string
 }>()
 

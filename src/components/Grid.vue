@@ -139,10 +139,6 @@ const destroy = async (item: string): Promise<void> => {
     :show-expand="showExpand"
     @update:options="loadItems"
   >
-    <template #item.metadata="{ item }: ServerItems">
-      <GridRowMetadata :item="item" />
-    </template>
-
     <template
       v-for="name in slotNames"
       #[name]="slotProps"

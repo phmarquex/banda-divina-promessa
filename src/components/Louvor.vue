@@ -52,7 +52,7 @@ const groupNames = group => {
   <VCard
     class="mt-3"
     :title="groupNames(entity)"
-    flat="true"
+    flat
   >
     <VRow
       v-for="louvor in louvores"
@@ -93,7 +93,7 @@ const groupNames = group => {
               <VBtn
                 class="teste"
                 color="warning"
-                block="true"
+                block
                 @click="cifras(louvor.cifras)"
               >
                 <template #prepend>
@@ -111,7 +111,7 @@ const groupNames = group => {
               <VBtn
                 class="teste"
                 color="warning"
-                block="true"
+                block
                 @click="cifras(louvor.cifras, true)"
               >
                 <template #prepend>
@@ -131,7 +131,7 @@ const groupNames = group => {
             >
               <VBtn
                 color="primary"
-                block="true"
+                block
                 @click="youtube(louvor.youtube)"
               >
                 <template #prepend>

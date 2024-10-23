@@ -7,5 +7,5 @@ const props = route.params
 </script>
 
 <template>
-  <New :id="props.id" />
+  <New :id="props.id || ''" />
 </template>
