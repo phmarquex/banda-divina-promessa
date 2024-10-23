@@ -1,0 +1,161 @@
+.bg-white {
+  background-color: rgb(var(--v-theme-surface));
+}
+
+.fc-button-active {
+  background-color: rgba(126, 78, 230, 0.37) !important;
+  color: #7E4EE6 !important;
+}
+
+.fc-button-primary:hover {
+  background-color: rgba(126, 78, 230, 0.37) !important;
+  color: #7E4EE6 !important;
+}
+
+.fc-toolbar-chunk:first-child {
+  display: flex;
+  margin-left: 15px;
+}
+
+.fc-toolbar-chunk:last-child {
+  display: flex;
+  margin-right: 15px;
+}
+
+.fc-toolbar-chunk > h2::first-letter {
+  text-transform: uppercase;
+}
+
+.fc-toolbar-chunk > h2 {
+  font-family: "Inter", sans-serif, -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
+  "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-inline: 1rem;
+  line-height: 1.58334;
+}
+.fc-toolbar-chunk > button {
+  background-color: rgb(var(--v-theme-surface)) !important;
+  border-color: #7C7F84 !important;
+  color: #8A8D93 !important;
+  box-shadow: none !important;
+  border-radius: 8px !important;
+  font-size: 12px !important;
+  padding: 0 12px !important;
+}
+
+.fc-toolbar-chunk > .fc-button-group > button:first-child {
+  border-radius: 8px 0 0 8px !important;
+}
+
+.fc-toolbar-chunk > .fc-button-group > button:last-child {
+  border-radius: 0 8px 8px 0 !important;
+}
+
+.fc-toolbar-chunk > .fc-button-group > button {
+  background-color: rgb(var(--v-theme-surface));
+  border-color: #7E4EE6 !important;
+  color: #7E4EE6;
+  box-shadow: none !important;
+  font-family: "Inter", sans-serif, -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
+  "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.fc-scroller-harness > a, .fc-col-header-cell-cushion {
+  color: #636464 !important;
+}
+
+.fc-scroller-harness > a, .fc-col-header-cell-cushion::first-letter {
+  text-transform: uppercase !important;
+}
+.fc-scroller-harness > a, .fc-daygrid-day-number {
+  color: #7C7F84 !important;
+}
+
+.materio-event-primary {
+  background: rgba(126, 78, 230, 0.25) !important;
+  border: 0 !important;
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 10px !important;
+  cursor: pointer;
+
+  span {
+    color: #7E4EE6 !important;
+  }
+}
+
+.materio-event-secondary {
+  background: rgba(138, 141, 147, 0.30) !important;
+  border: 0 !important;
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 10px !important;
+  cursor: pointer;
+
+  span {
+    color: #474749 !important;
+  }
+}
+
+.materio-event-success {
+  background: rgba(86, 202, 0, 0.30) !important;
+  border: 0 !important;
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 10px !important;
+  cursor: pointer;
+
+  span {
+    color: #2e7000 !important;
+  }
+}
+
+
+
+.materio-event-info {
+  background: rgba(22, 177, 255, 0.30) !important;
+  border: 0 !important;
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 10px !important;
+  cursor: pointer;
+
+  span {
+    color: #1181bd !important;
+  }
+}
+
+.materio-event-error {
+  background: rgba(255, 76, 81, 0.30) !important;
+  border: 0 !important;
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 10px !important;
+  cursor: pointer;
+
+  span {
+    color: #FF4C51 !important;
+  }
+}
+
+.materio-event-warning {
+  background: rgba(255, 180, 0, 0.30) !important;
+  border: 0 !important;
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 2px 10px !important;
+  cursor: pointer;
+
+  span {
+    color: #b68200 !important;
+  }
+}
+
+.fc-scrollgrid {
+  border-left: 0 !important;
+}
+
+

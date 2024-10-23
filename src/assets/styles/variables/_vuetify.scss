@@ -5,3 +5,18 @@
 // @forward "../../../@core/scss/template/libs/vuetify/variables" with (
 //   $<variable-name>: <variable-value>
 // )
+.v-toolbar__content * {
+  color: #2e263de6 !important;
+}
+
+.min-h-100-px {
+  min-height: 100px !important;
+}
+
+.min-h-200-px {
+  min-height: 200px !important;
+}
+
+.min-h-300-px {
+  min-height: 300px !important;
+}

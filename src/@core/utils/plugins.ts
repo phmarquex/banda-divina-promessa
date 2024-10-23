@@ -3,7 +3,7 @@ import type { App } from 'vue'
 /**
  * This is helper function to register plugins like a nuxt
  * To register a plugin just export a const function `defineVuePlugin` that takes `app` as argument and call `app.use`
- * For Scanning plugins it will include all files in `src/plugins` and `src/plugins/**\/index.ts`
+ * For Scanning plugins it will include all files in `src/plugins` and `src/plugins/**\/index.vue`
  *
  *
  * @param {App} app Vue app instance
@@ -11,7 +11,7 @@ import type { App } from 'vue'
  *
  * @example
  * ```ts
- * // File: src/plugins/vuetify/index.ts
+ * // File: src/plugins/vuetify/index.vue
  *
  * import type { App } from 'vue'
  * import { createVuetify } from 'vuetify'

@@ -22,40 +22,38 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
     />
   </VerticalNavGroup>
 
-  <!-- 👉 Apps & Pages -->
+  <!-- 👉 Menu -->
   <VerticalNavSectionTitle
     :item="{
-      heading: 'Apps & Pages',
-    }"
-  />
-
-  <VerticalNavLink
-    :item="{
-      title: 'Account Settings',
-      icon: 'ri-user-settings-line',
-      to: '/account-settings',
-    }"
-  />
-
-  <VerticalNavLink
-    :item="{
-      title: 'Login',
-      icon: 'ri-login-box-line',
-      to: '/login',
+      heading: 'Menu',
     }"
   />
   <VerticalNavLink
     :item="{
-      title: 'Register',
-      icon: 'ri-user-add-line',
-      to: '/register',
+      title: 'Contratos',
+      icon: 'ri-file-paper-2-line',
+      to: '/contratos/template',
     }"
   />
   <VerticalNavLink
     :item="{
-      title: 'Error',
-      icon: 'ri-information-line',
-      to: '/no-existence',
+      title: 'Clientes',
+      icon: 'ri-user-line',
+      to: '/clientes',
+    }"
+  />
+  <VerticalNavLink
+    :item="{
+      title: 'Eventos',
+      icon: 'ri-calendar-event-fill',
+      to: '/eventos/calendario',
+    }"
+  />
+  <VerticalNavLink
+    :item="{
+      title: 'Análises',
+      icon: 'mdi-magnify',
+      to: '/analises',
     }"
   />
 
@@ -67,82 +65,9 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   />
   <VerticalNavLink
     :item="{
-      title: 'Contratos',
-      icon: 'ri-article-line',
-      to: '/contratos',
-    }"
-  />
-
-  <!-- 👉 User Interface -->
-  <VerticalNavSectionTitle
-    :item="{
-      heading: 'User Interface',
-    }"
-  />
-  <VerticalNavLink
-    :item="{
-      title: 'Typography',
-      icon: 'ri-text',
-      to: '/typography',
-    }"
-  />
-  <VerticalNavLink
-    :item="{
-      title: 'Icons',
-      icon: 'ri-remixicon-line',
-      to: '/icons',
-    }"
-  />
-  <VerticalNavLink
-    :item="{
-      title: 'Cards',
-      icon: 'ri-bar-chart-box-line',
-      to: '/cards',
-    }"
-  />
-
-  <!-- 👉 Forms & Tables -->
-  <VerticalNavSectionTitle
-    :item="{
-      heading: 'Forms & Tables',
-    }"
-  />
-  <VerticalNavLink
-    :item="{
-      title: 'Form Layouts',
-      icon: 'ri-layout-4-line',
-      to: '/form-layouts',
-    }"
-  />
-  <VerticalNavLink
-    :item="{
-      title: 'Tables',
-      icon: 'ri-table-alt-line',
-      to: '/tables',
-    }"
-  />
-
-  <!-- 👉 Others -->
-  <VerticalNavSectionTitle
-    :item="{
-      heading: 'Others',
-    }"
-  />
-
-  <VerticalNavLink
-    :item="{
-      title: 'Documentation',
-      icon: 'ri-article-line',
-      href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/documentation/',
-      target: '_blank',
-    }"
-  />
-  <VerticalNavLink
-    :item="{
-      title: 'Raise Support',
-      href: 'https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free/issues',
-      icon: 'ri-lifebuoy-line',
-      target: '_blank',
+      title: 'Emails',
+      icon: 'ri-mail-line',
+      to: '/emails',
     }"
   />
 </template>

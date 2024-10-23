@@ -26,7 +26,7 @@ module.exports = {
     '@typescript-eslint',
     'regex',
   ],
-  ignorePatterns: ['src/plugins/iconify/*.js', 'node_modules', 'dist', '*.d.ts', 'vendor'],
+  ignorePatterns: ['src/plugins/iconify/*.js', 'node_modules', 'dist', '*.d.ts', 'vendor', 'package.json', 'tsconfig.json'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -137,6 +137,7 @@ module.exports = {
     '@typescript-eslint/no-shadow': ['error'],
 
     '@typescript-eslint/consistent-type-imports': 'error',
+    '@typescript-eslint/no-use-before-define': 'off',
 
     // Plugin: eslint-plugin-promise
     'promise/always-return': 'off',
@@ -170,7 +171,6 @@ module.exports = {
     'vue/prefer-separate-static-class': 'error',
     'vue/prefer-true-attribute-shorthand': 'error',
     'vue/v-on-function-call': 'error',
-    'vue/no-restricted-class': ['error', '/^(p|m)(l|r)-/'],
     'vue/valid-v-slot': ['error', {
       allowModifiers: true,
     }],
@@ -206,12 +206,6 @@ module.exports = {
           regex: '@/assets/styles',
           replacement: '@styles',
           message: 'Use \'@styles\' path alias for importing styles from \'src/assets/styles\'',
-        },
-
-        {
-          id: 'Disallow icon of icon library',
-          regex: 'mdi-\\w',
-          message: 'Only \'remix\' icons are allowed',
         },
 
         {

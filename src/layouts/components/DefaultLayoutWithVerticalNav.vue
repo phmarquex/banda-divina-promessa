@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { toast } from 'vue3-toastify'
 import NavItems from '@/layouts/components/NavItems.vue'
 import logo from '@images/logo.svg?raw'
 import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
@@ -7,6 +8,18 @@ import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
 import Footer from '@/layouts/components/Footer.vue'
 import NavbarThemeSwitcher from '@/layouts/components/NavbarThemeSwitcher.vue'
 import UserProfile from '@/layouts/components/UserProfile.vue'
+
+const store = useStore()
+const diff = ref(store.getters.getRemainingTime)
+
+setInterval(() => {
+  diff.value = store.getters.getRemainingTime
+}, 1000)
+
+const copyAccessToken = async () => {
+  await navigator.clipboard.writeText(store.state.user.token)
+  toast.info('JWT Copiado!')
+}
 </script>
 
 <template>
@@ -40,9 +53,29 @@ import UserProfile from '@/layouts/components/UserProfile.vue'
 
         <VSpacer />
 
-        <IconBtn class="me-2">
-          <VIcon icon="ri-notification-line" />
-        </IconBtn>
+        <VTooltip text="Click to copy JWT">
+          <template #activator="{ props }">
+            <VChip
+              v-bind="props"
+              class="mr-5"
+              @click="copyAccessToken"
+            >
+              Token Lifetime:
+              <VProgressCircular
+                class="ml-1"
+                :model-value="100 - Math.round(diff * 100 / 280)"
+                width="5"
+                size="20"
+              />
+            </VChip>
+          </template>
+        </VTooltip>
+
+        <IconMap />
+
+        <VSpacer />
+
+        <Notifications />
 
         <NavbarThemeSwitcher class="me-2" />
 

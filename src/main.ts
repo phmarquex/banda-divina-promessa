@@ -5,6 +5,7 @@ import { registerPlugins } from '@core/utils/plugins'
 
 // Styles
 import '@core/scss/template/index.scss'
+import 'vue3-toastify/dist/index.css'
 import '@layouts/styles/index.scss'
 
 // Create vue app

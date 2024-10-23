@@ -7,6 +7,11 @@ const router = createRouter({
   routes,
 })
 
+router.beforeEach((to, from, next) => {
+  document.title = (to.meta.title as string) || 'Lazy'
+  next()
+})
+
 export default function (app: App) {
   app.use(router)
 }

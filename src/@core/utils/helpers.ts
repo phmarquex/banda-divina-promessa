@@ -1,9 +1,11 @@
+import { formatDateDB } from '@core/utils/formatters'
+
 // 👉 IsEmpty
 export const isEmpty = (value: unknown): boolean => {
   if (value === null || value === undefined || value === '')
     return true
 
-  return !!(Array.isArray(value) && value.length === 0)
+  return (Array.isArray(value) && value.length === 0)
 }
 
 // 👉 IsNullOrUndefined
@@ -29,4 +31,19 @@ export const isToday = (date: Date) => {
     && date.getMonth() === today.getMonth()
     && date.getFullYear() === today.getFullYear()
   )
+}
+
+// 👉 RemoveKeysBeforeUpdate
+const keysToRemove: string[] = ['updated_at', 'updated_by']
+
+export const rk = (formData: object): object => {
+  for (const key in toRaw(formData)) {
+    if (/dt_start|dt_end/.test(key))
+      formData[key] = formatDateDB(formData[key])
+
+    if (keysToRemove.includes(key))
+      delete formData[key]
+  }
+
+  return formData
 }

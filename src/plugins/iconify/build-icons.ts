@@ -87,17 +87,9 @@ const sources: BundleScriptConfig = {
 
     // Iconify JSON file (@iconify/json is a package name, /json/ is directory where files are, then filename)
     require.resolve('@iconify-json/ri/icons.json'),
-
-    {
-      filename: require.resolve('@iconify-json/bxl/icons.json'),
-      icons: [
-        'facebook',
-        'twitter',
-        'github',
-        'google',
-        'linkedin',
-      ],
-    },
+    require.resolve('@iconify-json/bxl/icons.json'),
+    require.resolve('@iconify-json/mdi/icons.json'),
+    require.resolve('@iconify-json/line-md/icons.json'),
 
     // Custom file with only few icons
     // {

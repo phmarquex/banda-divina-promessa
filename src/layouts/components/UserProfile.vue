@@ -1,9 +1,19 @@
 <script setup lang="ts">
+import { useStore } from 'vuex'
+import { keycloakService } from '@/plugins/keycloak'
+import { router } from '@/plugins/router'
 import avatar1 from '@images/avatars/avatar-1.png'
 
-const userInfo = JSON.parse(localStorage.getItem('userInfo') || '')
+const store = useStore()
 
-console.info(userInfo)
+if (!store.state.authenticated)
+  router.push('/login')
+
+const logout = async () => {
+  store.commit('logout')
+  await keycloakService.callLogout('https://lazymoney.34.95.140.66.sslip.io/login')
+  await router.push('/login')
+}
 </script>
 
 <template>
@@ -52,9 +62,9 @@ console.info(userInfo)
             </template>
 
             <VListItemTitle class="font-weight-semibold">
-              {{ userInfo.name }}
+              {{ store.state.user.info.name }}
             </VListItemTitle>
-            <VListItemSubtitle>{{ userInfo.email }}</VListItemSubtitle>
+            <VListItemSubtitle>{{ store.state.user.info.email }}</VListItemSubtitle>
           </VListItem>
           <VDivider class="my-2" />
 
@@ -68,7 +78,14 @@ console.info(userInfo)
               />
             </template>
 
-            <VListItemTitle>Profile</VListItemTitle>
+            <RouterLink
+              to="/perfil/conta"
+              class="no-color"
+            >
+              <VListItemTitle>
+                Perfil
+              </vlistitemtitle>
+            </RouterLink>
           </VListItem>
 
           <!-- 👉 Settings -->
@@ -84,37 +101,11 @@ console.info(userInfo)
             <VListItemTitle>Settings</VListItemTitle>
           </VListItem>
 
-          <!-- 👉 Pricing -->
-          <VListItem link>
-            <template #prepend>
-              <VIcon
-                class="me-2"
-                icon="ri-money-dollar-circle-line"
-                size="22"
-              />
-            </template>
-
-            <VListItemTitle>Pricing</VListItemTitle>
-          </VListItem>
-
-          <!-- 👉 FAQ -->
-          <VListItem link>
-            <template #prepend>
-              <VIcon
-                class="me-2"
-                icon="ri-question-line"
-                size="22"
-              />
-            </template>
-
-            <VListItemTitle>FAQ</VListItemTitle>
-          </VListItem>
-
           <!-- Divider -->
           <VDivider class="my-2" />
 
           <!-- 👉 Logout -->
-          <VListItem to="/login">
+          <VListItem @click="logout">
             <template #prepend>
               <VIcon
                 class="me-2"
@@ -131,3 +122,18 @@ console.info(userInfo)
     </VAvatar>
   </VBadge>
 </template>
+
+<style scoped>
+.no-color {
+  color: inherit; /* Inherit the color from the parent element */
+  text-decoration: none; /* Remove underline if any */
+}
+
+/* Additional style to ensure no color change on hover or active state */
+.no-color:hover,
+.no-color:active,
+.no-color:focus {
+  color: inherit;
+  text-decoration: none;
+}
+</style>
