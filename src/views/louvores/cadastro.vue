@@ -168,7 +168,10 @@ if (watch) {
         >
           <VSelect
             v-model="state.tom"
-            :items="['C', 'D', 'E', 'F', 'G', 'A', 'B', 'CM', 'DM', 'EM', 'FM', 'GM', 'AM', 'BM']"
+            :items="['C', 'C#', 'Db', 'D', 'D#', 'Eb', 'E', 'F', 'F#', 'Gb', 'G', 'G#', 'Ab', 'A', 'A#', 'Bb',
+                     'B', 'CM', 'C#M', 'DbM', 'DM', 'D#M', 'EbM', 'EM', 'FM', 'F#M', 'GbM', 'GM', 'G#M', 'AbM',
+                     'AM', 'A#M', 'BbM', 'BM', 'Cm', 'C#m', 'Dbm', 'Dm', 'D#m', 'Ebm', 'Em', 'Fm', 'F#m', 'Gbm',
+                     'Gm', 'G#m', 'Abm', 'Am', 'A#m', 'Bbm', 'Bm']"
             label="Tom"
             placeholder="Selecione o tom"
           />
@@ -182,7 +185,10 @@ if (watch) {
         >
           <VSelect
             v-model="state.tom_original"
-            :items="['C', 'D', 'E', 'F', 'G', 'A', 'B', 'CM', 'DM', 'EM', 'FM', 'GM', 'AM', 'BM']"
+            :items="['C', 'C#', 'Db', 'D', 'D#', 'Eb', 'E', 'F', 'F#', 'Gb', 'G', 'G#', 'Ab', 'A', 'A#', 'Bb',
+                     'B', 'CM', 'C#M', 'DbM', 'DM', 'D#M', 'EbM', 'EM', 'FM', 'F#M', 'GbM', 'GM', 'G#M', 'AbM',
+                     'AM', 'A#M', 'BbM', 'BM', 'Cm', 'C#m', 'Dbm', 'Dm', 'D#m', 'Ebm', 'Em', 'Fm', 'F#m', 'Gbm',
+                     'Gm', 'G#m', 'Abm', 'Am', 'A#m', 'Bbm', 'Bm']"
             label="Tom Original"
             placeholder="Selecione o tom original"
           />

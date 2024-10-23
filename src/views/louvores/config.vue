@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { doc, getDoc, updateDoc } from 'firebase/firestore'
-import { toast } from 'vue3-toastify'
 import { useFirestore } from 'vuefire'
 
 const marcacao = async (id, grupo, item) => {
   const temp = !item[grupo]
+
+  item.jovens = item.irmas = item.grupo_louvor = false
+  item[grupo] = temp
+
   const db = useFirestore()
   const louvorRef = doc(db, 'louvores', id)
   const louvorQuery = await getDoc(louvorRef)
@@ -14,10 +17,6 @@ const marcacao = async (id, grupo, item) => {
     await updateDoc(louvorRef, { jovens: false, irmas: false, grupo_louvor: false })
     await updateDoc(louvorRef, { [grupo]: !louvorData[grupo] })
   }
-
-  toast.success('Louvor atualizado!')
-  item.jovens = item.irmas = item.grupo_louvor = false
-  item[grupo] = temp
 }
 </script>
 
