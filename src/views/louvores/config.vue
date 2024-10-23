@@ -33,34 +33,28 @@ const marcacao = async (id, grupo, item) => {
   >
     <template #item.jovens="{ item }">
       <div class="d-flex justify-center align-center">
-        <IconBtn
-          :color="item.jovens ? 'error' : ''"
+        <VCheckbox
+          :model-value="item.jovens"
           @click="marcacao(item.id, 'jovens', item)"
-        >
-          <VIcon icon="line-md-person-filled" />
-        </IconBtn>
+        />
       </div>
     </template>
 
     <template #item.irmas="{ item }">
       <div class="d-flex justify-center align-center">
-        <IconBtn
-          :color="item.irmas ? 'error' : ''"
+        <VCheckbox
+          :model-value="item.irmas"
           @click="marcacao(item.id, 'irmas', item)"
-        >
-          <VIcon icon="line-md-person-filled" />
-        </IconBtn>
+        />
       </div>
     </template>
 
     <template #item.grupo_louvor="{ item }">
       <div class="d-flex justify-center align-center">
-        <IconBtn
-          :color="item.grupo_louvor ? 'error' : ''"
+        <VCheckbox
+          :model-value="item.grupo_louvor"
           @click="marcacao(item.id, 'grupo_louvor', item)"
-        >
-          <VIcon icon="line-md-person-filled" />
-        </IconBtn>
+        />
       </div>
     </template>
   </Grid>

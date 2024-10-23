@@ -9,7 +9,7 @@ export const themes: Record<string, ThemeDefinition> = {
     colors: {
       'primary': staticPrimaryColor,
       'on-primary': '#fff',
-      'primary-darken-1': '#7E4EE6',
+      'primary-darken-1': '#075eab',
       'secondary': '#8A8D93',
       'secondary-darken-1': '#7C7F84',
       'on-secondary': '#fff',
@@ -48,7 +48,7 @@ export const themes: Record<string, ThemeDefinition> = {
     },
 
     variables: {
-      'code-color': '#d400ff',
+      'code-color': '#075eab',
       'overlay-scrim-background': '#2E263D',
       'tooltip-background': '#1A0E33',
       'overlay-scrim-opacity': 0.5,
@@ -80,7 +80,7 @@ export const themes: Record<string, ThemeDefinition> = {
     colors: {
       'primary': staticPrimaryColor,
       'on-primary': '#fff',
-      'primary-darken-1': '#7E4EE6',
+      'primary-darken-1': '#075eab',
       'secondary': '#8A8D93',
       'secondary-darken-1': '#7C7F84',
       'on-secondary': '#fff',
@@ -119,7 +119,7 @@ export const themes: Record<string, ThemeDefinition> = {
     },
 
     variables: {
-      'code-color': '#d400ff',
+      'code-color': '#075eab',
       'overlay-scrim-background': '#312D4B',
       'tooltip-background': '#F7F4FF',
       'overlay-scrim-opacity': 0.5,
